@@ -23,7 +23,12 @@ public class JavaPractice {
     }
     
     public static int sumDigits(String str) {
-        return -1;
+        String allNums = s.replaceAll("[^0-9]","");
+        int sum = 0;
+        for(int i = 0; i < allNums.length(); i++){
+            sum += Character.getNumericValue(allNums.charAt(i));
+        }
+        return sum;
     }
     public static boolean canBalance(int[] nums) {
         return false;
