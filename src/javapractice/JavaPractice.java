@@ -19,7 +19,20 @@ public class JavaPractice {
     }
 
     public static int makeChocolate(int small, int big, int goal) {
-        return -1;
+        while(goal >= 5 && large >= 1) {
+            goal -= 5;
+            large --;
+        }
+        if(goal < small)
+             return goal;
+        else if(goal == small)
+        {
+            return small;
+        }
+        else
+        {
+             return -1;
+        }
     }
     
     public static int sumDigits(String str) {
