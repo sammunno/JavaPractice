@@ -54,8 +54,14 @@ public class JavaPractice {
         return remString;
     }
     public static  int[] squareUp(int n) {
-        int sam[] = new int[1];
+        int sam[] = new int[n * n];
         
+        int temp;
+        for(int i = 1; i <= n; i++){
+            temp = n * i - 1;
+            for(int j = 1; j <= i; j++, temp--)
+                sam[temp] = j;
+        }
         return sam;
     }
 
