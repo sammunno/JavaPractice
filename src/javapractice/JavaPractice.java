@@ -43,7 +43,23 @@ public class JavaPractice {
         }
         return sum;
     }
-    public static boolean canBalance(int[] nums) {
+    public static boolean canBalance(ArrayList<Integer> theList){
+        if(theList.size() <= 1) return false;
+        for(int splitSpot = 1; splitSpot < theList.size(); splitSpot++){
+            ArrayList<Integer> left = new ArrayList<>
+                    (theList.subList(0, splitSpot));
+            ArrayList<Integer> right = new ArrayList<>
+                    (theList.subList(splitSpot,theList.size()));
+            int sumLeft = 0;
+            int sumRight = 0;
+            for(int i = 0; i < splitSpot; i++){
+                sumLeft += theList.get(i);
+            }
+            for(int j = splitSpot; j < theList.size(); j++){
+                sumRight += theList.get(j);
+            }
+            if( sumLeft == sumRight ) return true;
+        }
         return false;
     }
     public static String noX(String str) {
