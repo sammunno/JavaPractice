@@ -62,8 +62,9 @@ public class JavaPractice {
         }
         return false;
     }
-    public static String noX(String str) {
-        return "";
+    public static String noX(String s){
+        if( !s.contains("x") ) return s;
+        return noX(s.replaceFirst("x",""));
     }
     public static String withoutString(String base, String remove) {
         String remString = base.replace(remove, "");
