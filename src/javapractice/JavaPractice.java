@@ -32,7 +32,8 @@ public class JavaPractice {
         return "";
     }
     public static String withoutString(String base, String remove) {
-        return "";
+        String remString = base.replace(remove, "");
+        return remString;
     }
     public static  int[] squareUp(int n) {
         int sam[] = new int[1];
